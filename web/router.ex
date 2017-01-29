@@ -18,6 +18,7 @@ defmodule Test.Router do
 
     get "/", PageController, :index
     resources "/etatmissions", EtatmissionController
+    resources "/etatpropositions", EtatpropositionController
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,13 @@
+<h2>Show etatproposition</h2>
+
+<ul>
+
+  <li>
+    <strong>Libelle:</strong>
+    <%= @etatproposition.libelle %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: etatproposition_path(@conn, :edit, @etatproposition) %>
+<%= link "Back", to: etatproposition_path(@conn, :index) %>

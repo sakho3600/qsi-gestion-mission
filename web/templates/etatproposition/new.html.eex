@@ -1,0 +1,6 @@
+<h2>New etatproposition</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: etatproposition_path(@conn, :create) %>
+
+<%= link "Back", to: etatproposition_path(@conn, :index) %>

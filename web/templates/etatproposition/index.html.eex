@@ -1,0 +1,26 @@
+<h2>Listing etatpropositions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Libelle</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for etatproposition <- @etatpropositions do %>
+    <tr>
+      <td><%= etatproposition.libelle %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: etatproposition_path(@conn, :show, etatproposition), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: etatproposition_path(@conn, :edit, etatproposition), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: etatproposition_path(@conn, :delete, etatproposition), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New etatproposition", to: etatproposition_path(@conn, :new) %>
