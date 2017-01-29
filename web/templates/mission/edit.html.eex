@@ -1,0 +1,6 @@
+<h2>Edit mission</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: mission_path(@conn, :update, @mission) %>
+
+<%= link "Back", to: mission_path(@conn, :index) %>

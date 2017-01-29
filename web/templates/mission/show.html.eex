@@ -1,0 +1,33 @@
+<h2>Show mission</h2>
+
+<ul>
+
+  <li>
+    <strong>Titre:</strong>
+    <%= @mission.titre %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @mission.description %>
+  </li>
+
+  <li>
+    <strong>Budget:</strong>
+    <%= @mission.budget %>
+  </li>
+
+  <li>
+    <strong>Date demarrage:</strong>
+    <%= @mission.date_demarrage %>
+  </li>
+
+  <li>
+    <strong>Etatmissions:</strong>
+    <%= @mission.etatmissions_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: mission_path(@conn, :edit, @mission) %>
+<%= link "Back", to: mission_path(@conn, :index) %>

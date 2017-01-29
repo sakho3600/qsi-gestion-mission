@@ -1,0 +1,34 @@
+<h2>Listing missions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>Budget</th>
+      <th>Date demarrage</th>
+      <th>Etatmissions</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for mission <- @missions do %>
+    <tr>
+      <td><%= mission.titre %></td>
+      <td><%= mission.description %></td>
+      <td><%= mission.budget %></td>
+      <td><%= mission.date_demarrage %></td>
+      <td><%= mission.etatmissions_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: mission_path(@conn, :show, mission), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: mission_path(@conn, :edit, mission), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: mission_path(@conn, :delete, mission), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New mission", to: mission_path(@conn, :new) %>

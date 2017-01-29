@@ -3,7 +3,7 @@ defmodule Test.Etatmission do
 
   schema "etatmissions" do
     field :libelle, :string
-
+    has_many :missions, Test.Mission
     timestamps()
   end
 
