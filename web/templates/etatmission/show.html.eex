@@ -1,0 +1,13 @@
+<h2>Show etatmission</h2>
+
+<ul>
+
+  <li>
+    <strong>Libelle:</strong>
+    <%= @etatmission.libelle %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: etatmission_path(@conn, :edit, @etatmission) %>
+<%= link "Back", to: etatmission_path(@conn, :index) %>

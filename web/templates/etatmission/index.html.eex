@@ -1,0 +1,26 @@
+<h2>Listing etatmissions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Libelle</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for etatmission <- @etatmissions do %>
+    <tr>
+      <td><%= etatmission.libelle %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: etatmission_path(@conn, :show, etatmission), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: etatmission_path(@conn, :edit, etatmission), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: etatmission_path(@conn, :delete, etatmission), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New etatmission", to: etatmission_path(@conn, :new) %>

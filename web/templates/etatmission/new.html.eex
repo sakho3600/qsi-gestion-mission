@@ -1,0 +1,6 @@
+<h2>New etatmission</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: etatmission_path(@conn, :create) %>
+
+<%= link "Back", to: etatmission_path(@conn, :index) %>
